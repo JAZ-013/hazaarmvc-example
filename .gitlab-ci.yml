@@ -1,0 +1,9 @@
+Default Test:
+  script:
+  - git submodule update --init
+Platform:
+  script:
+  - 'sed -i "/Version:/c\Version: $CI_BUILD_REF_NAME" .project'
+  - rsync -r --exclude=/library --exclude=/.git* --exclude=/.idea . $PLATFORM_TARGET/$CI_BUILD_REF_NAME/
+  only:
+  - tags

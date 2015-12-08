@@ -1,0 +1,7 @@
+Name: example
+Title: Example Application
+Maintainer: Jamie Carl <jamie@hazaarmvc.com>
+Version: 1.0.0
+Depends: core (>=1.0.0)
+Description: The Hazaar MVC skeleton project.
+The project is installed when a new project is being initialised with the Hazaar Tool.  eg: 'hazaar init'.
