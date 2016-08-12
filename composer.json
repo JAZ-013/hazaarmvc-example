@@ -1,6 +1,6 @@
 {
-  "name": "jamiec/test",
-  "description": "Example Application",
+  "name": "hazaarlabs/example",
+  "description": "Example Application for Hazaar MVC",
   "type": "project",
   "config": {
     "secure-http": false
