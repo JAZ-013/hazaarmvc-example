@@ -5,9 +5,9 @@
 
 <head>
 
-    <base href="<?=$this->application->url();?>/" target="_top"/>
+    <base href="<?=$this->application->url();?>/" target="_top" />
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
     <?php
 
@@ -17,9 +17,9 @@
     echo $this->html->title($this->application->config->app['name']);
 
     /**
-     * This import() method is very important.  It is used to generate any <script> or <link> tags that are required by
+     * This import() method is very important.  It is used to generate any <link> tags that are required by
      * any views and view helpers that you are using.  Without this, you may find some feature of HazaarMVC view helper
-     * ecosystem will not work
+     * ecosystem will not work correctly.  The equivalent of this for <script> tags is post().
      */
     echo $this->import();
 
@@ -32,54 +32,89 @@
 </head>
 <body class="<?=$this->application->config->app['theme']['name']; ?>">
 
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><?=$this->application->config->app['name']; ?></a>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <?=$this->application->config->app['name']; ?>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <?=$this->html->a($this->application->url(), 'Home'); ?>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Help
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Documentation</li>
+                            <li>
+                                <?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website'); ?>
+                            </li>
+                            <li>
+                                <?=$this->html->a('http://www.hazaarmvc.com/docs', 'Online Documentation'); ?>
+                            </li>
+                            <li>
+                                <?=$this->html->a('http://www.hazaarmvc.com/apidoc', 'API Reference'); ?>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Support</li>
+                            <li>
+                                <?=$this->html->a('http://git.funkynerd.com/hazaar/hazaar-mvc/issues', 'Support Issues'); ?>
+                            </li>
+                            <li>
+                                <?=$this->html->a('http://git.funkynerd.com/hazaar/hazaar-mvc/issues/new', 'Create Issue'); ?>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><?=$this->html->a($this->application->url(), 'Home'); ?></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-header">Documentation</li>
-                        <li><?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website'); ?></li>
-                        <li><?=$this->html->a('http://www.hazaarmvc.com/docs', 'Online Documentation'); ?></li>
-                        <li><?=$this->html->a('http://www.hazaarmvc.com/docs/page/api', 'API Reference'); ?></li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Support</li>
-                        <li><?=$this->html->a('http://git.funkynerd.com/hazaar/hazaar-mvc/issues', 'Support Issues'); ?></li>
-                        <li><?=$this->html->a('http://git.funkynerd.com/hazaar/hazaar-mvc/issues/new', 'Create Issue'); ?></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <!--/.navbar-collapse -->
     </div>
-</div>
 
-<div class="container">
+    <div class="container">
 
-    <?=$this->layout(); ?>
+        <?php
 
-    <hr/>
+        /**
+         * The layout() method includes the view that we are currently trying to display.
+         */
+        echo $this->layout();
 
-    <footer>
-        <p>&copy; Jamie Carl - 2015</p>
+        ?>
 
-        <p class="text-center"><?=$this->html->poweredby(); ?></p>
-    </footer>
+        <hr />
 
-</div>
+        <footer>
+            <p>&copy; Jamie Carl - 2015</p>
+            <p class="text-center">
+                <?=$this->html->poweredby(); ?>
+            </p>
+        </footer>
 
-<?=$this->post(); ?>
+    </div>
+
+    <?php
+
+    /**
+     * This post() method is very important.  It is used to generate any <script> tags that are required by your applications
+     * and any views and view helpers that you are using.  Without this, you may find some feature of HazaarMVC view helper
+     * ecosystem will not work correctly.  It's here at the bottom so that pages load faster.
+     */
+
+    echo $this->post();
+
+    ?>
 
 </body>
 </html>
-    
+

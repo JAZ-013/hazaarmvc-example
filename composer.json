@@ -1,0 +1,18 @@
+{
+  "name": "jamiec/test",
+  "description": "Example Application",
+  "type": "project",
+  "config": {
+    "secure-http": false
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "http://git.hazaarlabs.com/hazaar/hazaar-mvc.git"
+    }
+  ],
+  "require": {
+    "hazaarlabs/hazaar-mvc": "dev-composer"
+  },
+  "minimum-stability": "dev"
+}

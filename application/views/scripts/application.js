@@ -1,49 +1,10 @@
 $(document).ready(function () {
 
-    $("#verticalSplitter").kendoSplitter({
-        orientation: "vertical",
-        panes: [
-            {resizable: false, size: "50px"},
-            {scrollable: false}
-        ]
-    });
+    /*
+     * This script is loaded using the requires() call in the controller.  It has a lower priority than libraries such
+     * as jQuery so you can be assured that is will be loaded after all your libraries are loaded and ready.
+     */
 
-    $("#horizontalSplitter").kendoSplitter({
-        panes: [
-            {collapsible: true, size: "180px"},
-            {collapsible: false}
-        ],
-        orientation: "horizontal"
-    });
+    console.log('Put your javascript here!');
 
-    $("#treeView").kendoTreeView();
-
-    $("#myGrid").kendoGrid({
-        columns: [
-            {title: "ID", field: "id"},
-            {title: "Code", field: "code"},
-            {title: "Number", field: "num"},
-            {title: "Date", field: "date", format: "{0:MM/dd/yyyy}"}
-        ],
-        dataSource: {
-            transport: {
-                read: {
-                    dataType: "json",
-                    url: "data/person.json"
-                }
-            },
-            schema: {
-                model: {
-                    fields: {
-                        id: {type: "number"},
-                        code: {type: "string"},
-                        num: {type: "number"},
-                        date: {type: "string"}
-                    }
-                }
-            }
-        },
-        sortable: true,
-        selectable: true
-    });
 });
