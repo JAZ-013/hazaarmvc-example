@@ -1,2 +1,7 @@
-/.idea
-/library
+/vendor
+/.vs
+/composer.lock
+/web.config
+/*.sln
+/*.phpproj
+/*.user
