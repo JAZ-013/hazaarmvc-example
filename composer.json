@@ -2,13 +2,10 @@
   "name": "hazaarlabs/example",
   "description": "Example Application for Hazaar MVC",
   "type": "project",
-  "config": {
-    "secure-http": false
-  },
   "repositories": [
     {
       "type": "vcs",
-      "url": "http://git.hazaarlabs.com/hazaar/hazaar-mvc.git"
+      "url": "https://git.hazaarlabs.com/hazaar/hazaar-mvc.git"
     }
   ],
   "require": {
