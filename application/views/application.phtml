@@ -5,7 +5,7 @@
 
 <head>
 
-    <base href="<?=$this->application->url();?>/" target="_top" />
+    <base href="<?=$this->application->url();?>" target="_top" />
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
@@ -36,7 +36,7 @@
 <body class="<?=$this->application->config->app['theme']['name']; ?>">
 
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?=$this->application->url();?>">
             <?=$this->application->config->app['name']; ?>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
