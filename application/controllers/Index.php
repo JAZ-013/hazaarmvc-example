@@ -4,10 +4,6 @@ class IndexController extends \Hazaar\Controller\Action {
 
     protected function init() {
 
-        $this->view->addHelper('bootstrap');
-
-        $this->view->requires('application.js');
-
     }
 
     public function index() {
