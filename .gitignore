@@ -5,3 +5,5 @@
 /*.sln
 /*.phpproj
 /*.user
+
+application/\.runtime/

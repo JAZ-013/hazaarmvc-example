@@ -1,46 +1,62 @@
 {
-  "production": {
-    "app": {
-      "name": "Example Application",
-      "version": "0.0.1",
-      "locale": "en_AU.UTF-8",
-      "layout": "application",
-      "theme": {
-        "name": "test"
-      },
-      "defaultController": "Index"
-    },
-    "paths": {
-      "model": "models",
-      "view": "views",
-      "controller": "controllers"
-    },
-    "php": {
-      "date": {
-        "timezone": "UTC"
-      },
-      "display_startup_errors": 0,
-      "display_errors": 0
-    },
-    "view": {
-      "helper": {
-        "load": {
-          "bootstrap": {
-            "theme": "yeti"
-          }
+    "production": {
+        "app": {
+            "name": "Hazaar MVC Example Application",
+            "version": "1.2.0",
+            "locale": "en_AU.UTF-8",
+            "layout": "application",
+            "theme": {
+                "name": "test"
+            },
+            "defaultController": "Index",
+            "rewrite": false
+        },
+        "paths": {
+            "model": "models",
+            "view": "views",
+            "controller": "controllers"
+        },
+        "php": {
+            "date": {
+                "timezone": "UTC"
+            },
+            "display_startup_errors": 0,
+            "display_errors": 0
+        },
+        "view": {
+            "requires": [ "application.js" ],
+            "link": [ "main.css" ],
+            "helper": {
+                "load": {
+                    "cdnjs": {
+                        "cache_local": true,
+                        "libs": [
+                            {
+                                "name": "pace",
+                                "files": [ "pace.min.js", "themes/purple/pace-theme-minimal.min.css" ]
+                            },
+                            {
+                                "name": "jquery",
+                                "version": "2.2.4"
+                            }
+                        ]
+                    },
+                    "bootstrap": {
+                        "theme": "yeti"
+                    }
+                }
+            }
         }
-      }
-    }
-  },
-  "development": {
-    "include": "production",
-    "app": {
-      "locale": "en",
-      "debug": true
     },
-    "php": {
-      "display_startup_errors": 1,
-      "display_errors": 1
+    "development": {
+        "include": "production",
+        "app": {
+            "locale": "en",
+            "debug": true
+        },
+        "php": {
+            "display_startup_errors": 1,
+            "display_errors": 1
+        }
     }
-  }
 }
