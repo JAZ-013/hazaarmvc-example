@@ -8,8 +8,7 @@
             "theme": {
                 "name": "test"
             },
-            "defaultController": "Index",
-            "rewrite": false
+            "defaultController": "Index"
         },
         "paths": {
             "model": "models",
