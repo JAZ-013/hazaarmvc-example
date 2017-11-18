@@ -2,6 +2,16 @@ body {
     padding-top: 3.5rem;
 }
 
+.btn-hazaar {
+    color: #fff;
+    background-color: #665e8d;
+    border-color: #554d7c;
+}
+
+    .btn-hazaar:hover {
+        color: #999;
+    }
+
 .bd-footer {
     font-size: 85%;
     text-align: center;
