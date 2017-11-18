@@ -13,7 +13,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "hazaarlabs/hazaar-mvc": "^2.3.28"
+        "hazaarlabs/hazaar-mvc": "^2.3.34"
     },
     "scripts": {
         "serve": "php -S 127.0.0.1:8080 -t public public/index.php"
