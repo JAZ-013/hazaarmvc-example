@@ -40,7 +40,7 @@
                         ]
                     },
                     "bootstrap": {
-                        "version": "4.0.0-alpha.6",
+                        "version": "4.0.0-beta.3",
                         "theme": "yeti"
                     }
                 }

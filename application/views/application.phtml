@@ -27,41 +27,40 @@
      * You can also import a stylesheet directly using the style() method of the HTML view helper:
      *
      * echo $this->html->link('main.css');
-     * 
+     *
      * However it is recommended that stylesheets now be imported using the application.json config.
      */
     ?>
 
 </head>
-<body class="<?=$this->application->config->app['theme']['name']; ?>">
+<body>
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <a class="navbar-brand" href="<?=$this->application->url();?>">
-            <?=$this->application->config->app['name']; ?>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <?=$this->html->a($this->application->url(), 'Home')->class('nav-link'); ?>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <h6 class="dropdown-header">Documentation</h6>
-                        <?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website')->class('dropdown-item'); ?>
-                        <?=$this->html->a('http://www.hazaarmvc.com/docs', 'Online Documentation')->class('dropdown-item'); ?>
-                        <?=$this->html->a('http://www.hazaarmvc.com/apidoc', 'API Reference')->class('dropdown-item'); ?>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-header">Support</h6>
-                        <?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues', 'Support Issues')->class('dropdown-item'); ?>
-                        <?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues/new', 'Create Issue')->class('dropdown-item'); ?>
-                    </div>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="<?=$this->application->url();?>">
+                <?=$this->application->config->app['name']; ?>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <?=$this->html->a($this->application->url(), 'Home')->class('nav-link'); ?>
+                    </li>
+                    <li class="nav-item">
+                        <?=$this->html->a($this->url('test'), 'Test')->class('nav-link'); ?>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <h6 class="dropdown-header">Documentation</h6><?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website')->class('dropdown-item'); ?><?=$this->html->a('http://www.hazaarmvc.com/docs', 'Online Documentation')->class('dropdown-item'); ?><?=$this->html->a('http://www.hazaarmvc.com/apidoc', 'API Reference')->class('dropdown-item'); ?>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Support</h6><?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues', 'Support Issues')->class('dropdown-item'); ?><?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues/new', 'Create Issue')->class('dropdown-item'); ?>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -102,7 +101,7 @@
 
             </ul>
             <p>Copyright &copy; Hazaar Labs - 2017</p>
-            
+
         </div>
     </footer>
 
