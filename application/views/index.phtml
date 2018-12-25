@@ -9,7 +9,8 @@
             This example application is a good starting point for building your own application with Hazaar MVC.
         </p>
         <p>
-            <a class="btn btn-hazaar btn-lg" href="http://www.hazaarmvc.com" role="button">Learn more &raquo;</a>
+            <?=$this->html->a($this->application->url('hazaar'), 'Open the Application Console &raquo;')
+                ->class('btn btn-hazaar btn-lg');?>
         </p>
     </div>
 </div>

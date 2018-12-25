@@ -1,6 +1,6 @@
 {
     "name": "hazaarlabs/example",
-    "description": "Example Skeleton Application for Hazaar MVC",
+    "description": "Example Application for Hazaar MVC",
     "type": "project",
     "license": "Apache-2.0",
     "keywords": [
@@ -13,7 +13,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "hazaarlabs/hazaar-mvc": "^2.4.0"
+        "hazaarlabs/hazaar-mvc": "^3.0.0"
     },
     "scripts": {
         "serve": "php -S 127.0.0.1:8080 -t public index.php"
