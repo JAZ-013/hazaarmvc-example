@@ -1,4 +1,4 @@
-# Hazaar MVC Skeleton Application
+# Hazaar MVC Example Application
 
 To make it easy to get up and running quickly, we have provided the Hazaar MVC Example Application to serve as a starting point for your development.
 
