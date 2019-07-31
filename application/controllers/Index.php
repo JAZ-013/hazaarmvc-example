@@ -1,6 +1,8 @@
 <?php
 
-class IndexController extends \Hazaar\Controller\Action {
+namespace Application\Controller;
+
+class Index extends \Hazaar\Controller\Action {
 
     protected function init() {
 
@@ -24,6 +26,12 @@ class IndexController extends \Hazaar\Controller\Action {
          * method just returns a string that the view uses for the header.
          */
         return "Welcome to Hazaar! MVC";
+
+    }
+
+    public function test(){
+
+        $this->view('test');
 
     }
 
