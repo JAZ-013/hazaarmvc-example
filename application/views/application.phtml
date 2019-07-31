@@ -49,14 +49,19 @@
                         <?=$this->html->a($this->application->url(), 'Home')->class('nav-link'); ?>
                     </li>
                     <li class="nav-item">
-                        <?=$this->html->a($this->url('test'), 'Test')->class('nav-link'); ?>
+                        <?=$this->html->a($this->application->url('test'), 'Test')->class('nav-link'); ?>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <h6 class="dropdown-header">Documentation</h6><?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website')->class('dropdown-item'); ?><?=$this->html->a('http://www.hazaarmvc.com/docs', 'Online Documentation')->class('dropdown-item'); ?><?=$this->html->a('http://www.hazaarmvc.com/apidoc', 'API Reference')->class('dropdown-item'); ?>
+                            <h6 class="dropdown-header">Documentation</h6>
+                            <?=$this->html->a('http://www.hazaarmvc.com', 'Hazaar MVC Website')->class('dropdown-item')->target('_blank'); ?>
+                            <?=$this->html->a('http://scroly.io/hazaarmvc', 'Online Documentation')->class('dropdown-item')->target('_blank'); ?>
+                            <?=$this->html->a('http://scroly.io/hazaarmvc/latest/api', 'API Reference')->class('dropdown-item')->target('_blank'); ?>
                             <div class="dropdown-divider"></div>
-                            <h6 class="dropdown-header">Support</h6><?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues', 'Support Issues')->class('dropdown-item'); ?><?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues/new', 'Create Issue')->class('dropdown-item'); ?>
+                            <h6 class="dropdown-header">Support</h6>
+                            <?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues', 'Support Issues')->class('dropdown-item')->target('_blank'); ?>
+                            <?=$this->html->a('http://git.hazaarlabs.com/hazaar/hazaar-mvc/issues/new', 'Create Issue')->class('dropdown-item')->target('_blank'); ?>
                         </div>
                     </li>
                 </ul>
