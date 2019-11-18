@@ -6,5 +6,9 @@
 /*.sln
 /*.phpproj
 /*.user
+/.vscode
 
-application/\.runtime/
+# Hazaar MVC Ignores
+/application/\.runtime
+/application/configs/local
+/application/configs/.*
